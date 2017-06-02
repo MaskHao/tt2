@@ -1,0 +1,314 @@
+.btn {
+  display: inline-block;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  background-color: #eee;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.btnColor1 {
+  color: #FD8A5C;
+  background-color: rgba(253, 138, 92, 0.2);
+}
+.btnColor2 {
+  color: #fff;
+  background-color: rgba(45, 54, 82, 0.5);
+}
+.btnColor3 {
+  color: #fff;
+  background-color: #5899FC;
+}
+.iconYellow {
+  color: #FD8A5C;
+}
+.title {
+  display: inline-block;
+}
+html,
+body {
+  height: 100%;
+}
+html {
+  font-family: MicrosoftYaHei;
+  color: #2d3652;
+}
+input[placeholder],
+[placeholder],
+*[placeholder] {
+  color: #666 !important;
+}
+a {
+  text-decoration: none;
+}
+.pr {
+  position: relative;
+}
+.pa {
+  position: absolute;
+}
+.pf {
+  position: fixed;
+}
+.f-l {
+  float: left;
+}
+.f-r {
+  float: right;
+}
+li,
+div,
+ul {
+  *zoom: 1;
+}
+li:after,
+div:after,
+ul:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.bgStyle {
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.tran {
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+}
+.error-notic {
+  float: left;
+  width: 100%;
+  line-height: 32px;
+  font-size: 12px;
+  text-align: center;
+  color: #f00;
+  margin: 0;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+* html .clearfix {
+  zoom: 1;
+}
+/* IE6 */
+* + html .clearfix {
+  zoom: 1;
+}
+/* IE7 */
+#wrap {
+  min-height: 100%;
+  background: #E9ECF6;
+  overflow-y: auto;
+  color: #2d3652;
+}
+#wrap a {
+  text-decoration: none;
+}
+#wrap p {
+  margin: 0;
+  padding: 0;
+}
+#wrap .header {
+  height: 90px;
+  line-height: 90px;
+  padding: 0 45px;
+  background: #2D3652;
+}
+#wrap .header nav {
+  float: left;
+}
+#wrap .header nav a {
+  margin-right: 59px;
+}
+#wrap .header nav .logo {
+  margin-right: 86px;
+}
+#wrap .header nav a strong {
+  opacity: 0.5;
+  font-family: PingFangSC-Regular;
+  font-size: 18px;
+  color: #FFFFFF;
+}
+#wrap .header nav .active strong {
+  opacity: 1;
+}
+#wrap .header .user-hand {
+  float: right;
+}
+#wrap .header .user-hand .btn {
+  height: 37px;
+  line-height: 37px;
+  color: #ffffff;
+  padding: 0 10px;
+  background-color: #5899FC;
+}
+#wrap .header .user-hand .userMsg {
+  margin-left: 45px;
+  color: #ffffff;
+}
+#wrap .header .user-hand .userMsg img {
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+#wrap .header .userName {
+  color: #ffffff;
+  margin-left: 22px;
+}
+#wrap .back {
+  position: fixed;
+  top: 132px;
+  left: 15px;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  border-radius: 50%;
+  opacity: 0.2;
+  font-size: 24px;
+  color: #fff;
+  background: rgba(45, 54, 82, 0.5);
+  border-radius: 8px;
+  z-index: 100;
+}
+#wrap .back :hover {
+  opacity: 1;
+}
+#wrap .back:hover {
+  opacity: 0.8;
+}
+#wrap .homePage {
+  width: 80%;
+  margin: 35px auto;
+}
+#wrap .homePage h2 {
+  font-size: 18px;
+  color: #2D3652;
+  font-weight: normal;
+}
+#wrap .homePage .card {
+  float: left;
+  width: 280px;
+  height: 168px;
+  color: #FFFFFF;
+  border-radius: 4px;
+  background-size: 100% 100%;
+  margin: 20px 20px 20px 0;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+#wrap .homePage .card .xiabiao {
+  border: 18px solid #FD8A5C;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-right-radius: 4px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+#wrap .homePage .card .xiabiao .iconfont {
+  position: absolute;
+  bottom: -15px;
+  right: -15px;
+  font-size: 14px;
+  color: #ffffff;
+}
+#wrap .homePage .card-cont {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#wrap .homePage .card-intro,
+#wrap .homePage .card-msg {
+  opacity: 1;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+#wrap .homePage .card-intro .teamName,
+#wrap .homePage .card-msg .teamName {
+  font-size: 24px;
+  line-height: 30px;
+  padding: 0;
+  margin-bottom: 10px;
+}
+#wrap .homePage .card-cont .cc {
+  opacity: 0;
+  width: 68px;
+  height: 68px;
+  line-height: 68px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 20px;
+  background-color: #fff;
+  position: absolute;
+  bottom: 0;
+  -webkit-transform: rotateZ(180deg);
+  transform: rotateZ(180deg);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+#wrap .homePage .card-cont .cc .iconfont {
+  font-size: 30px;
+  color: #2D3652;
+}
+#wrap .homePage .card-cont .cc :hover {
+  color: #5899FC;
+}
+#wrap .homePage .card-cont .cc1 {
+  left: 20px;
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+#wrap .homePage .card-cont .cc2 {
+  left: 106px;
+  -webkit-transition-delay: 0.15s;
+  transition-delay: 0.15s;
+}
+#wrap .homePage .card-cont .cc3 {
+  left: 192px;
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+#wrap .homePage .card:hover .card-intro {
+  opacity: 0;
+}
+#wrap .homePage .card:hover .cc {
+  opacity: 1;
+  -webkit-transform: rotateZ(0deg);
+  transform: rotateZ(0deg);
+  bottom: 50px;
+}
+#wrap .homePage .card-add {
+  background: #ffffff;
+  color: #ccc;
+  text-align: center;
+  cursor: pointer;
+}
+#wrap .homePage .card-add .card-add-icon {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-size: 48px;
+}
+#wrap .homePage .card-add .card-add-word {
+  font-size: 18px;
+}
