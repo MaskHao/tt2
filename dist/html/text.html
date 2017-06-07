@@ -5,25 +5,23 @@
     <meta http-equiv = "X-UA-Compatible" content = "IE=edge,chrome=1" />
     <meta http-equiv = "X-UA-Compatible" content = "chrome=1" >
     <title>拓拓2</title>
-
-    <link rel="stylesheet" href="dist/css/ant.css">
     <link rel="stylesheet" href="dist/css/icon/iconfont.css">
-    <link rel="stylesheet" href="dist/css/normalize.css">
-    <link rel="stylesheet" href="dist/css/index.css">
+    <link rel="stylesheet" href="dist/css/content.css">
+
 </head>
 <body>
 
-<div style="display: ;" class="page">
+<div style="display: none;" class="page">
     <!--方向.icon-arrow-right-circle-->
     <div class="loginPage">
         <div class="box-cont">
             <!--登录-->
-            <div class="login-con sign f-l" style="display: ;">
+            <div class="login-con sign f-l" style="display:none ;">
                 <img class="banner" src="image/banner.png" alt="">
                 <!--邮箱-->
                 <div class="form-group">
                     <div class="input">
-                        <em class=" icon-envelope"></em>
+                        <em class=" iconfont icon-email"></em>
                         <input class="email" type="text" placeholder="邮箱"/>
                     </div>
                     <p class="error-notic">账号不存在</p>
@@ -31,7 +29,7 @@
                 <!--密码-->
                 <div class="form-group">
                     <div class="input">
-                        <em class="icon-lock"></em>
+                        <em class="iconfont icon-lock"></em>
                         <input class="password" type="password" placeholder="密码">
                         <a href="javascript:;" class="forgetPass">忘记密码?</a>
 
@@ -52,14 +50,17 @@
                 <p class="lm-ft">还没有账号？<a href="" class="move-next">注册新账号</a></p>
 
             </div>
+
+
+
             <!--注册-->
-            <div class="signUp sign f-l" style="display:none ">
+            <div class="signUp sign f-l" style="display:none">
                 <img class="banner" src="image/banner.png" alt="">
                 <p class="signTitle">注册新账号</p>
                 <!--邮箱-->
                 <div class="form-group">
                     <div class="input">
-                        <em class="icon-envelope"></em>
+                        <em class="iconfont icon-email"></em>
                         <input class="email" type="email" placeholder="邮箱"/>
                     </div>
                     <p class="error-notic">请输入正确邮箱</p>
@@ -83,7 +84,7 @@
             </div>
 
             <!--邮箱验证-->
-            <div class=" signVerify sign f-l" style="display:none ;">
+            <div class=" signVerify sign f-l" style="display: none;">
                 <img class="banner" src="image/banner.png" alt="">
                 <p class="signTitle">已向 <a href="" class="emailVerify">adasfsf@gmail.com</a>发送验证码</p>
                 <p class="signTitle">请在10分钟内输入收到的验证码</p>
@@ -175,7 +176,7 @@
             </div>
 
             <!--第三方登录并绑定-->
-            <div class="signOther sign f-l" style="display: none;">
+            <div class="signOther sign f-l" style="display:none ;">
                 <img class="banner" src="image/banner.png" alt="">
                 <!--邮箱-->
                 <div class="form-group">
@@ -211,7 +212,7 @@
 
 </div>
 
-<div id="wrap" style="display: none;">
+<div id="wrap" style="display: ;">
     <div class="header clearfix">
         <nav>
             <a href="" class="logo"> <img src="image/logo.png" alt=""></a>
@@ -220,7 +221,8 @@
             <a href=""><strong>项目</strong></a>
         </nav>
         <div class="user-hand">
-            <a href="#" class="userMsg"><img class="userHeadImg" src="/image/headImg.png" alt="用户头像">Leo Perkins<i class="iconfont icon-arrow-down"></i> </a>
+            <a href="#" class="userMsg">
+                <img class="userHeadImg" src="/image/headImg.png" alt="用户头像">Leo Perkins<i class="iconfont icon-arrow-down"></i> </a>
         </div>
     </div>
 
@@ -273,8 +275,8 @@
         </div>
     </div>
 
-    <!--新建项目-->
-    <div class="addPro" style="display:none">
+    <!--新建项目/新建团队-->
+    <div class="addProTeam" style="display:none">
         <h2>新建项目</h2>
 
         <div>
@@ -299,7 +301,7 @@
     </div>
 
     <!-- 团队详情/项目详情 -->
-    <div class="pro-Team" style="display: ;">
+    <div class="pro-Team" style="display:none ;">
         <div class="pt-hd">
             <div class="pt-hd-cont clearfix">
 
@@ -382,88 +384,397 @@
                         <p class="btn btnColor2"><span>用户待激活,<a href="javascript:;">重新发送</a></span></p>
                     </div>
                 </div>
+                <div class="card ">
+                    <div class="card-msg clearfix tran">
+                        <img  src="/image/headImg.png" alt="">
+                        <div class="memberIntro">
+                            <p class="mt-name">leoperkins <i class="iconfont icon-owner iconYellow"></i></p>
+                            <span class="mt-email">loome@163.com</span>
+                            <ul>
+                                <li>PO</li>
+                                <li>CEO</li>
+                            </ul>
+                        </div>
+                    </div>
 
+                </div>
+
+                <div class="card ">
+                    <div class="card-msg clearfix tran">
+                        <img  src="/image/headImg.png" alt="">
+                        <div class="memberIntro">
+                            <p class="mt-name">leoperkins <i class="iconfont icon-owner iconYellow"></i></p>
+                            <span class="mt-email">loome@163.com</span>
+                            <ul>
+                                <li>PO</li>
+                                <li>CEO</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-detial clearfix tran">
+
+                        <a href="" class="card-cancel">
+                            <i class="iconfont icon-del"></i>
+                        </a>
+                        <img  src="/image/headImg.png" alt="">
+                        <div class="memberIntro">
+                            <p class="mt-name">leoperkins</p>
+                            <span class="mt-email">loome@163.com</span>
+                        </div>
+                        <div class="cd-msg">
+                            <div><span class="title">团队权限</span> <span>拥有者</span></div>
+                            <div><span class="title">成员标签</span><div class="tagList">sfsf </div></div>
+                            <div><span class="title">联系方式</span><span>18855411234</span></div>
+                        </div>
+                        <p class="btn btnColor2"><span>用户待激活,<a href="javascript:;">重新发送</a></span></p>
+                    </div>
+                </div>
             </div>
 
         </div>
 
-        <a class="add-member" href="">
-            <i class="iconfont icon-user-add"></i>
-        </a>
+        <!--添加成员按钮-->
+        <a class="add-member" href=""><i class="iconfont icon-user-add"></i></a>
     </div>
 
 
     <a href="javascript:;" class="back iconfont icon-back tran"></a>
 
 
-    <!--弹出层1  邀请新成员-->
-    <div class="Popups" style="display: none;">
-        <a href="javascript:;" class="cancel iconfont icon-close"></a>
 
-        <div class="p-cont p-addMember">
-            <p class="p-title">邀请新成员</p>
-            <div class="input">
-                <input type="text" placeholder="输入邮箱查找，回车确认">
+
+    <!--右侧slider框-->
+    <!--右侧弹框出现时，给body添加类sliderShow -->
+    <div class="rightSlider tran open" style="display:none ;">
+        <div class="slider-hd">
+            <span>团队信息选项</span>
+            <i class="iconfont icon-close"></i>
+        </div>
+        <div class="slider-bd">
+            <div>
+                <p class="title">团队名称</p>
+                <input type="text"/>
+            </div>
+            <div>
+                <p class="title">团队简介</p>
+                <div>
+                    <Input type="textarea" placeholder="" />
+                </div>
+            </div>
+            <div>
+                <p class="title">团队封面</p>
+                <div class="upload">
+                    <div class=" upImg bgStyle" style="background-image:url(/image/login_bg.png);">
+                        <a href="javascript:;" class="upImg-icon"><i class=" iconfont icon-cloud-upload"></i></a>
+                    </div>
+                </div>
+
+
+            </div>
+            <div>
+                <p class="title">拥有者</p>
+                <div class="">
+                    <div class="liLeft">
+                        <img src="/image/login_bg.png" alt=""/>
+                        <span>emilyYe</span>
+                    </div>
+                    <div class="liRight">
+                        <button class="btn tran ">移交</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="slider-ft">
+            <button class="btn tran btnColor3">保存</button>
+            <a href="javascript:;" class="iconYellow">删除团队</a>
+        </div>
+    </div>
+
+
+
+
+    <!--白板-->
+    <div class="whiteBoard">
+        <div class="wb-hd">
+            <ol class="breadcrumb">
+                <li>
+                    <a href="/"><i class="iconfont icon-users"></i>mintcode</a>
+                </li>
+                <li>
+                    里程碑演示代号 - sprint1
+                </li>
+            </ol>
+            <!--import { Breadcrumb } from 'antd';-->
+            <!--ReactDOM.render(-->
+            <!--<Breadcrumb separator=">">-->
+                <!--<Breadcrumb.Item>Home</Breadcrumb.Item>-->
+                <!--<Breadcrumb.Item href=""><i class="iconfont icon-users">mintcode</Breadcrumb.Item>-->
+                <!--<Breadcrumb.Item>里程碑演示代号 - sprint1</Breadcrumb.Item>-->
+            <!--</Breadcrumb>-->
+            <!--, mountNode);-->
+        </div>
+        <div class="box  form-white" >
+            <table id="whiteboard-table" class="whiteboard-table" >
+                <thead>
+                <tr class="taskboard-row">
+                    <th class="taskboard-cell taskboard-parent">产品backlog</th>
+                    <th class="taskboard-cell">计划 <i>6</i></th>
+                    <th class="taskboard-cell">进行 <i>10</i></th>
+                    <th class="taskboard-cell">完成 <i>1</i></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="taskboard-row">
+
+                    <td class="taskboard-cell taskboard-parent">
+                        <div class="tb-pivot-item">
+                            <div class="taskboard-parent-wrapper wordwrap">
+                                <span class="wit-title" tabindex="0" data-bind="text:Story_Title, click: $root.getTrDetail">【前端】工作量统计的前端页面</span>
+                                <span data-bind="text:Story_AssignName" class="assign-name">Eden Liang</span>
+
+                                <div class="assign">
+                                    <img class="userImg" src="dist/image/headerImg.jpg" />
+                                    <span> <i class="iconfont icon-folder"></i>tuotuo2</span>
+                                </div>
+                                <a href="javascript:;" title="Add: Task" class="add-icon iconfont icon-plus"></a>
+                            </div>
+
+                        </div>
+                    </td>
+
+                    <td class="taskboard-cell" data-bind="droppable:1">
+                        <!-- ko template:{foreach:Todo_Tasks, name:'temp-tile', afterAdd:$root.hide} --><!-- /ko -->
+                    </td>
+                    <td class="taskboard-cell" data-bind="droppable:2">
+                        <!-- ko template:{foreach:InProgress_Tasks, name:'temp-tile', afterAdd:$root.hide} --><!-- /ko -->
+                    </td>
+                    <td class="taskboard-cell" data-bind="droppable:3">
+                        <!-- ko template:{foreach:Done_Tasks, name:'temp-tile', afterAdd:$root.hide} --><!-- /ko -->
+                    </td>
+                </tr>
+                <tr class="taskboard-row">
+
+                    <td class="taskboard-cell taskboard-parent">
+                        11111
+                    </td>
+
+                    <td class="taskboard-cell" data-bind="droppable:1">
+                        <!-- ko template:{foreach:Todo_Tasks, name:'temp-tile', afterAdd:$root.hide} --><!-- /ko -->
+                    </td>
+                    <td class="taskboard-cell" data-bind="droppable:2">
+                        <!-- ko template:{foreach:InProgress_Tasks, name:'temp-tile', afterAdd:$root.hide} --><!-- /ko -->
+                    </td>
+                    <td class="taskboard-cell" data-bind="droppable:3">
+                        <!-- ko template:{foreach:Done_Tasks, name:'temp-tile', afterAdd:$root.hide} --><!-- /ko -->
+                    </td>
+                </tr>
+                <tr class="taskboard-row">
+
+                    <td class="taskboard-cell taskboard-parent">
+                        11111
+                    </td>
+
+                    <td class="taskboard-cell" data-bind="droppable:1">
+                        <!-- ko template:{foreach:Todo_Tasks, name:'temp-tile', afterAdd:$root.hide} --><!-- /ko -->
+                    </td>
+                    <td class="taskboard-cell" data-bind="droppable:2">
+                        <!-- ko template:{foreach:InProgress_Tasks, name:'temp-tile', afterAdd:$root.hide} --><!-- /ko -->
+                    </td>
+                    <td class="taskboard-cell" data-bind="droppable:3">
+                        <!-- ko template:{foreach:Done_Tasks, name:'temp-tile', afterAdd:$root.hide} --><!-- /ko -->
+                    </td>
+                </tr>
+                <tr class="taskboard-row">
+
+                    <td class="taskboard-cell taskboard-parent">
+                        11111
+                    </td>
+
+                    <td class="taskboard-cell" data-bind="droppable:1">
+                        <!-- ko template:{foreach:Todo_Tasks, name:'temp-tile', afterAdd:$root.hide} --><!-- /ko -->
+                    </td>
+                    <td class="taskboard-cell" data-bind="droppable:2">
+                        <!-- ko template:{foreach:InProgress_Tasks, name:'temp-tile', afterAdd:$root.hide} --><!-- /ko -->
+                    </td>
+                    <td class="taskboard-cell" data-bind="droppable:3">
+                        <!-- ko template:{foreach:Done_Tasks, name:'temp-tile', afterAdd:$root.hide} --><!-- /ko -->
+                    </td>
+                </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+    </div>
+
+
+</div>
+
+<!--表格-->
+<script type="text/html" id="temp-tr">
+    <tr class="taskboard-row">
+
+        <td class="taskboard-cell taskboard-parent">
+            <div class="tb-pivot-item">
+                <div class="taskboard-parent-wrapper wordwrap">
+                    <span class="wit-title" tabindex="0" data-bind="text:Story_Title, click: $root.getTrDetail">
+
+                    </span>
+                    <span data-bind="text:Story_AssignName" class="assign-name"></span>
+                    <span class="icon add-icon action" tabindex="0" title="Add: Task" data-bind="click:$root.addTask">
+                        <i class="fa fa-plus-square"></i>
+                    </span>
+                </div>
+
+            </div>
+        </td>
+
+        <td class="taskboard-cell" data-bind="droppable:1">
+            <!-- ko template:{foreach:Todo_Tasks, name:'temp-tile', afterAdd:$root.hide} --><!-- /ko -->
+        </td>
+        <td class="taskboard-cell" data-bind="droppable:2">
+            <!-- ko template:{foreach:InProgress_Tasks, name:'temp-tile', afterAdd:$root.hide} --><!-- /ko -->
+        </td>
+        <td class="taskboard-cell" data-bind="droppable:3">
+            <!-- ko template:{foreach:Done_Tasks, name:'temp-tile', afterAdd:$root.hide} --><!-- /ko -->
+        </td>
+    </tr>
+</script>
+
+<!-- 白板内容 -->
+<script type="text/html" id="temp-tile">
+    <div class="tb-tile" data-bind="draggable:true, attr:{'data-pindex':$parentContext.$index(), 'data-index': $index}, click: function(){$root.getItemDetail($context)}">
+        <div class="tb-tile-content">
+            <div class="wit-title" data-bind="text:Task_Title, attr:{title:Task_Title}"></div>
+            <div class="wit-extra mt5">
+                <div class="wit-remaining-time" data-bind="text:Task_Time, visible:Task_Time != 0"></div>
+                <div data-bind="text:Task_AssignName, attr:{title:Task_AssignName}" class="text-right ellipsis"></div>
+                @*<div class="portrait portrait20 pull-right">
+                <div class="img-wrapper">
+                    <img data-bind="attr:{src:Task_HeadPic, title:Task_AssignName}" />
+                </div>
+            </div>*@
+            </div>
+        </div>
+    </div>
+</script>
+
+
+
+
+<!--弹出层1  邀请新成员-->
+<div class="Popups" style="display:none ;">
+    <a href="javascript:;" class="cancel iconfont icon-close"></a>
+
+    <div class="p-cont p-addMember">
+        <p class="p-title">邀请新成员</p>
+        <div class="search">
+            <input type="text" placeholder="输入邮箱查找，回车确认"/>
+            <!--有搜索结果-->
+            <div class="search-cont" style="display:none ">
+                <p class="title">团队</p>
+                <ul class="">
+                    <li class="tran">
+                        <div class="liLeft"><span>emliy@163.om</span></div>
+                        <div class="liRight"><i class="iconfont icon-owner iconYellow"></i><span class="">leoperkins</span></div>
+                    </li>
+                    <li class="tran">
+                        <div class="liLeft"><span>emliy@163.om</span></div>
+                        <div class="liRight"><i class="iconfont icon-owner iconYellow"></i><span class="unJoined">leoperkins</span></div>
+                    </li>
+                </ul>
+                <p class="title">成员</p>
+                <ul class="">
+                    <li class="tran">
+                        <div class="liLeft"><span>emliy@163.om</span></div>
+                        <div class="liRight"> <span class="unJoined">yasa@163.om</span></div>
+                    </li>
+                    <li class="tran">
+                        <div class="liLeft"><span>emliy@163.om</span></div>
+                        <div class="liRight"> <span class="unJoined">yasa@163.om</span></div>
+                    </li>
+                    <li class="tran">
+                        <div class="liLeft"><span>emliy@163.om</span></div>
+                        <div class="liRight"> <span class="unJoined">yasa@163.om</span></div>
+                    </li>
+                    <li class="tran">
+                        <div class="liLeft"><span>emliy@163.om</span></div>
+                        <div class="liRight"> <span class="unJoined">yasa@163.om</span></div>
+                    </li>
+                    <li class="tran">
+                        <div class="liLeft"><span>emliy@163.om</span></div>
+                        <div class="liRight"> <span class="unJoined">yasa@163.om</span></div>
+                    </li>
+                    <li class="tran">
+                        <div class="liLeft"><span>emliy@163.om</span></div>
+                        <div class="liRight"> <span class="unJoined">yasa@163.om</span></div>
+                    </li>
+                </ul>
+            </div>
+            <!--无搜索结果-->
+            <div class="search-cont unfound" style="display:none;">
+                <img src="dist/image/Group 10.png" />
+                <p>未找到此用户</p>
+                <p class="email">emliyYe@163.com</p>
+                <button class="btn ">邀请</button>
+
             </div>
 
-
-            <ul class="">
-                <li class="tran">
-                    <div class="liLeft"><span>emliy@163.om</span></div>
-                    <div class="liRight"> <span class="joined">已加入</span></div>
-                </li>
-                <li class="tran">
-                    <div class="liLeft"><span>emliy@163.om</span></div>
-                    <div class="liRight"> <span class="unJoined">待激活</span></div>
-                </li>
-            </ul>
         </div>
+        <ul class="search-result">
+            <li class="tran">
+                <div class="liLeft"><span>emliy@163.om</span></div>
+                <div class="liRight"> <span class="joined">已加入</span></div>
+            </li>
+            <li class="tran">
+                <div class="liLeft"><span>emliy@163.om</span></div>
+                <div class="liRight"> <span class="unJoined">待激活</span></div>
+            </li>
+        </ul>
+
     </div>
 
+</div>
 
+<!--弹出层2  移交团队-->
+<div class="Popups" style="display: none;">
+    <a href="javascript:;" class="cancel iconfont icon-close"></a>
 
-    <!--弹出层2  移交团队-->
-    <div class="Popups" style="display: ;">
-        <a href="javascript:;" class="cancel iconfont icon-close"></a>
+    <div class="p-cont p-giveOther">
+        <p class="p-title">移交团队</p>
 
-        <div class="p-cont p-giveOther">
-            <p class="p-title">移交团队</p>
+        <ul>
+            <li class="tran">
+                <div class="liLeft"><img src="/image/headImg.png" alt=""><span>emliy@163.om</span></div>
+                <div class="liRight"> <button class="btn tran">移交</button></div>
+            </li>
+            <li class="tran">
+                <div class="liLeft"><img src="/image/headImg.png" alt=""><span>emliy@163.om</span></div>
+                <div class="liRight"> <button class="btn tran">移交</button></div>
+            </li>
+            <li class="tran">
+                <div class="liLeft"><img src="/image/headImg.png" alt=""><span>emliy@163.om</span></div>
+                <div class="liRight"> <button class="btn tran">移交</button></div>
+            </li>
+            <li class="tran">
+                <div class="liLeft"><img src="/image/headImg.png" alt=""><span>emliy@163.om</span></div>
+                <div class="liRight"> <button class="btn tran">移交</button></div>
+            </li>
 
-            <ul>
-                <li class="tran">
-                    <div class="liLeft"><img src="/image/headImg.png" alt=""><span>emliy@163.om</span></div>
-                    <div class="liRight"> <button class="btn tran">移交</button></div>
-                </li>
-                <li class="tran">
-                    <div class="liLeft"><img src="/image/headImg.png" alt=""><span>emliy@163.om</span></div>
-                    <div class="liRight"> <button class="btn tran">移交</button></div>
-                </li>
-                <li class="tran">
-                    <div class="liLeft"><img src="/image/headImg.png" alt=""><span>emliy@163.om</span></div>
-                    <div class="liRight"> <button class="btn tran">移交</button></div>
-                </li>
-                <li class="tran">
-                    <div class="liLeft"><img src="/image/headImg.png" alt=""><span>emliy@163.om</span></div>
-                    <div class="liRight"> <button class="btn tran">移交</button></div>
-                </li>
-
-            </ul>
-        </div>
-    </div>
-
-
-
-
-
-    <!--提示层-->
-    <div class="toast toast-success">
-        <div class="t-cont">团队移交成功!</div>
-    </div>
-
-    <div class="toast toast-error">
-        <div class="t-cont">团队移交失败!</div>
+        </ul>
     </div>
 </div>
+
+<!--成功错误等提示层-->
+<div class="toast toast-success" style="display: none;">
+    <div class="t-cont">团队移交成功!</div>
+</div>
+
+<div class="toast toast-error" style="display: none;">
+    <div class="t-cont">团队移交失败!</div>
+</div>
+
 
 
 

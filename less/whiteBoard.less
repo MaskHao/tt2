@@ -1,0 +1,63 @@
+@import "common";
+.whiteBoard{
+  width: 80%;
+  margin: 0 auto;
+  .wb-hd{
+    margin: 34px 0 12px;
+  }
+  .breadcrumb li{
+      display: inline-block;
+  }
+
+}
+#whiteboard-table{
+  width: 100%;
+  color: @tableColor;
+  border-collapse: collapse;
+  background-color: #fff;
+  th,td{
+    border: 1px solid #E9ECF6;
+    padding: 15px;
+  }
+  td{
+    position: relative;
+  }
+  th{text-align: left;}
+  th.taskboard-cell {
+    min-width: 274px;
+    width: 33%;
+    border-top-style: none;
+  }
+  th.taskboard-parent {
+    min-width: 220px;
+    width: 220px;
+  }
+  .taskboard-parent{
+    position: relative;
+  }
+  //白板中的用户头像
+  .userImg{
+    display: inline-block;
+    .img(24px);
+    vertical-align: middle;
+  }
+  .workName{
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .add-icon{
+    display: inline-block;
+    border: 18px solid @tagColor;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  .add-icon::before{
+    position: absolute;
+    color: #fff;
+    right: -15px;
+    bottom: -18px;
+  }
+}
