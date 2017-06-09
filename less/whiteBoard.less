@@ -10,40 +10,85 @@
   }
 
 }
-#whiteboard-table{
+.whiteboard-table{
   width: 100%;
-  color: @tableColor;
   border-collapse: collapse;
   background-color: #fff;
+  border-radius: 5px;
   th,td{
     border: 1px solid #E9ECF6;
-    padding: 15px;
+  }
+  th{
+    padding:15px 18px;
+    color: @tableTitleColor;
   }
   td{
     position: relative;
   }
   th{text-align: left;}
+
   th.taskboard-cell {
-    min-width: 274px;
     width: 33%;
-    border-top-style: none;
+    min-width: 320px;
+    padding:15px;
+  }
+  th i{
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    line-height:22px;
+    font-style: normal;
+    font-weight: 500;
+    background-color: #E9ECF6;
+    text-align: center;
+    border-radius: 50%;
+    margin-left: 12px;
   }
   th.taskboard-parent {
-    min-width: 220px;
-    width: 220px;
+    min-width: 178px;
+    width: 178px;
+    padding:15px;
+  }
+  tbody .taskboard-cell{
+    height: 130px;
+    min-height:130px;
+    padding:12px 6px;
+    vertical-align: top;
   }
   .taskboard-parent{
     position: relative;
+    padding:20px;
   }
   //白板中的用户头像
+  .assign{
+    position: absolute;
+    bottom:20px;
+    left: 18px;
+  }
   .userImg{
     display: inline-block;
     .img(24px);
     vertical-align: middle;
+    margin-right: 10px;
+    cursor: pointer;
   }
   .workName{
     display: inline-block;
+    color: @tableTitleColor;
     vertical-align: middle;
+    span,i{
+      display: inline-block;
+      vertical-align: middle;
+    }
+    i{
+      margin-right: 3px;
+    }
+    span{
+      width: 96px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
   }
   .add-icon{
     display: inline-block;
@@ -53,11 +98,199 @@
     position: absolute;
     bottom: 0;
     right: 0;
+    &::before{
+      position: absolute;
+      color: #fff;
+      right: -15px;
+      bottom: -18px;
+    }
   }
-  .add-icon::before{
-    position: absolute;
-    color: #fff;
-    right: -15px;
-    bottom: -18px;
+  //task
+  .tb-tile{
+    display: inline-block;
+    width: 140px;
+    height: 90px;
+    background: #A1C5FE;
+    margin: 10px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .tb-tile-content{
+    height: 100%;
+    background-color: #EEF4FE;
+    margin-left: 10px;
+    padding: 10px 14px 40px 8px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  .tb-tile:hover{
+    background-color: #5899FC;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.20);
+    .tb-tile-content{
+      color: #fff;
+      background-color: #2D3652;
+    }
+    .wit-remaining-time{
+      color: #fff;
+    }
+  }
+  .wit-title{
+    width: 100%;
+    margin-bottom: 10px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2;
+  }
+  .wit-extra{
+    .wit-remaining-time{
+      color: @tableTitleColor;
+      display: inline-block;}
+    img{
+      margin-right: 0;
+      float: right;
+    }
+  }
+
+
+}
+.whiteboard-add{
+  background-color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  img{
+    margin: 126px auto 43px;
+  }
+  p{
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+  .btn{
+    .btn2;
+    font-size: 18px;
+    width: 120px;
+    height: 50px;
+    margin-bottom: 120px;
   }
 }
+.task{
+  width: 72%;
+  min-width: 830px;
+  max-width: 1080px;
+  margin: 68px auto;
+  background-color: #fff;
+  .task-cont-left,.task-cont-right{
+    padding: 30px;
+  }
+  .task-cont-left{
+    float: left;
+    width: 70%;
+  }
+  .task-cont-right{
+    float: right;
+    width: 30%;
+    min-height: 700px;
+    background-color: rgba(238,238,238,0.2);
+  }
+  .task-cont-left{
+    .tc-hd{
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 25px;
+      a{
+        float: right;
+        font-size: 18px;
+        color: #000;
+      }
+      .more{
+        margin-right: 30px;
+      }
+    }
+    .form-group{
+      margin-bottom: 32px;
+    }
+    .item{
+      display: inline-block;
+      width: 25%;
+    }
+    .item.pro{
+      width: 48% ;
+    }
+    .title{
+      margin-bottom: 15px;
+    }
+  }
+  .taskName{
+    float: left;
+    width: 82%;
+    line-height:50px;
+    border:1px solid #ddd;
+    border-radius: 5px;
+    vertical-align: middle;
+    .tn-tag{
+      display: inline-block;
+      line-height:20px;
+      width:15%;
+      text-align: center;
+      border-right: 1px solid #ddd;
+    }
+    .tn-name{
+      outline: none;
+      border: none;
+      width: 85%;
+      text-indent: 15px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+  }
+  .esTime{
+    float: right;
+    width: 15%;
+    height: 50px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+  }
+  .edui-container{
+    height: 320px;
+    border: 1px solid #DDDDDD;
+    border-radius: 5px;
+  }
+  .btnSave,.btnCancel{
+    width: 160px;
+    height: 50px;
+    float: right;
+  }
+  .btnCancel{
+    color: #6B7185;
+    margin-right: 20px;
+  }
+
+
+  .taskTitle{
+    margin-bottom: 20px;
+  }
+  .task-cont-right{
+    .title{margin-right:15px;font-size: 12px}
+    .form-group{
+      font-size: 12px;
+      border-top: 1px solid #E9ECF6;
+      padding:20px 0;
+    }
+    .item{
+      margin-bottom: 15px;
+    }
+    .userMsg{
+      display: inline-block;
+      img{
+        .img(24px);
+        vertical-align: middle;
+      }
+      span{
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+

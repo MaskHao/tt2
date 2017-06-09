@@ -276,7 +276,7 @@ ul:after {
   width: 80px;
   line-height: 28px;
   color: #5899FC;
-  border-radius: 3px;
+  border-radius: 5px;
   background-color: #ffffff;
   border: 1px solid #5899FC;
   cursor: pointer;
@@ -286,7 +286,7 @@ ul:after {
 .rightSlider .liRight .btn:hover {
   color: #ffffff;
   background-color: #5899FC;
-  border-radius: 3px;
+  border-radius: 5px;
   cursor: pointer;
 }
 .rightSlider .slider-ft {
@@ -365,12 +365,29 @@ ul:after {
   padding: 0;
   list-style: none;
 }
-.Popups li {
+.Popups .search-cont li,
+.Popups .search-result li {
   line-height: 40px;
   font-size: 14px;
   padding: 0 20px;
+  color: #2d3652;
 }
-.Popups li:hover {
+.Popups .search-cont li .liLeft,
+.Popups .search-result li .liLeft {
+  width: 200px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.Popups .search-cont li .liRight,
+.Popups .search-result li .liRight {
+  width: 200px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.Popups .search-cont li:hover,
+.Popups .search-result li:hover {
   background-color: rgba(88, 153, 252, 0.1);
 }
 .Popups .search-result {
@@ -397,7 +414,7 @@ ul:after {
   width: 80px;
   line-height: 28px;
   color: #5899FC;
-  border-radius: 3px;
+  border-radius: 5px;
   background-color: #ffffff;
   border: 1px solid #5899FC;
   cursor: pointer;
@@ -406,7 +423,7 @@ ul:after {
 .Popups .liRight .btn:hover {
   color: #ffffff;
   background-color: #5899FC;
-  border-radius: 3px;
+  border-radius: 5px;
   cursor: pointer;
 }
 .Popups .joined {
@@ -418,7 +435,7 @@ ul:after {
 .Popups .search-cont {
   position: absolute;
   top: 50px;
-  width: 440px;
+  width: 480px;
   max-height: 450px;
   overflow-y: auto;
   text-align: center;
@@ -439,13 +456,17 @@ ul:after {
 }
 .Popups .unfound .btn {
   color: #5899FC;
-  border-radius: 3px;
+  border-radius: 5px;
   background-color: #ffffff;
   border: 1px solid #5899FC;
   cursor: pointer;
   margin-bottom: 52px;
   width: 90px;
   height: 40px;
+}
+.Popups .lhColor {
+  color: #5899FC;
+  text-decoration: underline;
 }
 .p-giveOther li {
   padding: 10px 20px;

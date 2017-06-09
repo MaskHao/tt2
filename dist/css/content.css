@@ -277,7 +277,7 @@ ul:after {
   width: 80px;
   line-height: 28px;
   color: #5899FC;
-  border-radius: 3px;
+  border-radius: 5px;
   background-color: #ffffff;
   border: 1px solid #5899FC;
   cursor: pointer;
@@ -287,7 +287,7 @@ ul:after {
 .rightSlider .liRight .btn:hover {
   color: #ffffff;
   background-color: #5899FC;
-  border-radius: 3px;
+  border-radius: 5px;
   cursor: pointer;
 }
 .rightSlider .slider-ft {
@@ -366,12 +366,29 @@ ul:after {
   padding: 0;
   list-style: none;
 }
-.Popups li {
+.Popups .search-cont li,
+.Popups .search-result li {
   line-height: 40px;
   font-size: 14px;
   padding: 0 20px;
+  color: #2d3652;
 }
-.Popups li:hover {
+.Popups .search-cont li .liLeft,
+.Popups .search-result li .liLeft {
+  width: 200px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.Popups .search-cont li .liRight,
+.Popups .search-result li .liRight {
+  width: 200px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.Popups .search-cont li:hover,
+.Popups .search-result li:hover {
   background-color: rgba(88, 153, 252, 0.1);
 }
 .Popups .search-result {
@@ -398,7 +415,7 @@ ul:after {
   width: 80px;
   line-height: 28px;
   color: #5899FC;
-  border-radius: 3px;
+  border-radius: 5px;
   background-color: #ffffff;
   border: 1px solid #5899FC;
   cursor: pointer;
@@ -407,7 +424,7 @@ ul:after {
 .Popups .liRight .btn:hover {
   color: #ffffff;
   background-color: #5899FC;
-  border-radius: 3px;
+  border-radius: 5px;
   cursor: pointer;
 }
 .Popups .joined {
@@ -419,7 +436,7 @@ ul:after {
 .Popups .search-cont {
   position: absolute;
   top: 50px;
-  width: 440px;
+  width: 480px;
   max-height: 450px;
   overflow-y: auto;
   text-align: center;
@@ -440,13 +457,17 @@ ul:after {
 }
 .Popups .unfound .btn {
   color: #5899FC;
-  border-radius: 3px;
+  border-radius: 5px;
   background-color: #ffffff;
   border: 1px solid #5899FC;
   cursor: pointer;
   margin-bottom: 52px;
   width: 90px;
   height: 40px;
+}
+.Popups .lhColor {
+  color: #5899FC;
+  text-decoration: underline;
 }
 .p-giveOther li {
   padding: 10px 20px;
@@ -929,7 +950,7 @@ ul:after {
   font-size: 18px;
   color: #ffffff;
   background-color: #5899FC;
-  border-radius: 3px;
+  border-radius: 5px;
   cursor: pointer;
   height: 50px;
 }
@@ -1039,6 +1060,7 @@ ul:after {
   display: inline-block;
   color: #ffffff;
   background-color: #5899FC;
+  border-radius: 5px;
   cursor: pointer;
   border-radius: 3px;
 }
@@ -1147,47 +1169,92 @@ ul:after {
 .whiteBoard .breadcrumb li {
   display: inline-block;
 }
-#whiteboard-table {
+.whiteboard-table {
   width: 100%;
-  color: #6B7185;
   border-collapse: collapse;
   background-color: #fff;
+  border-radius: 5px;
 }
-#whiteboard-table th,
-#whiteboard-table td {
+.whiteboard-table th,
+.whiteboard-table td {
   border: 1px solid #E9ECF6;
-  padding: 15px;
 }
-#whiteboard-table td {
+.whiteboard-table th {
+  padding: 15px 18px;
+  color: #6B7185;
+}
+.whiteboard-table td {
   position: relative;
 }
-#whiteboard-table th {
+.whiteboard-table th {
   text-align: left;
 }
-#whiteboard-table th.taskboard-cell {
-  min-width: 274px;
+.whiteboard-table th.taskboard-cell {
   width: 33%;
-  border-top-style: none;
+  min-width: 320px;
+  padding: 15px;
 }
-#whiteboard-table th.taskboard-parent {
-  min-width: 220px;
-  width: 220px;
+.whiteboard-table th i {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+  font-style: normal;
+  font-weight: 500;
+  background-color: #E9ECF6;
+  text-align: center;
+  border-radius: 50%;
+  margin-left: 12px;
 }
-#whiteboard-table .taskboard-parent {
+.whiteboard-table th.taskboard-parent {
+  min-width: 178px;
+  width: 178px;
+  padding: 15px;
+}
+.whiteboard-table tbody .taskboard-cell {
+  height: 130px;
+  min-height: 130px;
+  padding: 12px 6px;
+  vertical-align: top;
+}
+.whiteboard-table .taskboard-parent {
   position: relative;
+  padding: 20px;
 }
-#whiteboard-table .userImg {
+.whiteboard-table .assign {
+  position: absolute;
+  bottom: 20px;
+  left: 18px;
+}
+.whiteboard-table .userImg {
   display: inline-block;
   width: 24px;
   height: 24px;
   border-radius: 50%;
   vertical-align: middle;
+  margin-right: 10px;
+  cursor: pointer;
 }
-#whiteboard-table .workName {
+.whiteboard-table .workName {
+  display: inline-block;
+  color: #6B7185;
+  vertical-align: middle;
+}
+.whiteboard-table .workName span,
+.whiteboard-table .workName i {
   display: inline-block;
   vertical-align: middle;
 }
-#whiteboard-table .add-icon {
+.whiteboard-table .workName i {
+  margin-right: 3px;
+}
+.whiteboard-table .workName span {
+  width: 96px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.whiteboard-table .add-icon {
   display: inline-block;
   border: 18px solid #5899FC;
   border-top-color: transparent;
@@ -1196,9 +1263,197 @@ ul:after {
   bottom: 0;
   right: 0;
 }
-#whiteboard-table .add-icon::before {
+.whiteboard-table .add-icon::before {
   position: absolute;
   color: #fff;
   right: -15px;
   bottom: -18px;
+}
+.whiteboard-table .tb-tile {
+  display: inline-block;
+  width: 140px;
+  height: 90px;
+  background: #A1C5FE;
+  margin: 10px 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.whiteboard-table .tb-tile-content {
+  height: 100%;
+  background-color: #EEF4FE;
+  margin-left: 10px;
+  padding: 10px 14px 40px 8px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.whiteboard-table .tb-tile:hover {
+  background-color: #5899FC;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+}
+.whiteboard-table .tb-tile:hover .tb-tile-content {
+  color: #fff;
+  background-color: #2D3652;
+}
+.whiteboard-table .tb-tile:hover .wit-remaining-time {
+  color: #fff;
+}
+.whiteboard-table .wit-title {
+  width: 100%;
+  margin-bottom: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.whiteboard-table .wit-extra .wit-remaining-time {
+  color: #6B7185;
+  display: inline-block;
+}
+.whiteboard-table .wit-extra img {
+  margin-right: 0;
+  float: right;
+}
+.whiteboard-add {
+  background-color: #fff;
+  text-align: center;
+  border-radius: 5px;
+}
+.whiteboard-add img {
+  margin: 126px auto 43px;
+}
+.whiteboard-add p {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+.whiteboard-add .btn {
+  color: #5899FC;
+  border-radius: 5px;
+  background-color: #ffffff;
+  border: 1px solid #5899FC;
+  cursor: pointer;
+  font-size: 18px;
+  width: 120px;
+  height: 50px;
+  margin-bottom: 120px;
+}
+.task {
+  width: 72%;
+  min-width: 830px;
+  max-width: 1080px;
+  margin: 68px auto;
+  background-color: #fff;
+}
+.task .task-cont-left,
+.task .task-cont-right {
+  padding: 30px;
+}
+.task .task-cont-left {
+  float: left;
+  width: 70%;
+}
+.task .task-cont-right {
+  float: right;
+  width: 30%;
+  min-height: 700px;
+  background-color: rgba(238, 238, 238, 0.2);
+}
+.task .task-cont-left .tc-hd {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+.task .task-cont-left .tc-hd a {
+  float: right;
+  font-size: 18px;
+  color: #000;
+}
+.task .task-cont-left .tc-hd .more {
+  margin-right: 30px;
+}
+.task .task-cont-left .form-group {
+  margin-bottom: 32px;
+}
+.task .task-cont-left .item {
+  display: inline-block;
+  width: 25%;
+}
+.task .task-cont-left .item.pro {
+  width: 48% ;
+}
+.task .task-cont-left .title {
+  margin-bottom: 15px;
+}
+.task .taskName {
+  float: left;
+  width: 82%;
+  line-height: 50px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  vertical-align: middle;
+}
+.task .taskName .tn-tag {
+  display: inline-block;
+  line-height: 20px;
+  width: 15%;
+  text-align: center;
+  border-right: 1px solid #ddd;
+}
+.task .taskName .tn-name {
+  outline: none;
+  border: none;
+  width: 85%;
+  text-indent: 15px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.task .esTime {
+  float: right;
+  width: 15%;
+  height: 50px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+.task .edui-container {
+  height: 320px;
+  border: 1px solid #DDDDDD;
+  border-radius: 5px;
+}
+.task .btnSave,
+.task .btnCancel {
+  width: 160px;
+  height: 50px;
+  float: right;
+}
+.task .btnCancel {
+  color: #6B7185;
+  margin-right: 20px;
+}
+.task .taskTitle {
+  margin-bottom: 20px;
+}
+.task .task-cont-right .title {
+  margin-right: 15px;
+  font-size: 12px;
+}
+.task .task-cont-right .form-group {
+  font-size: 12px;
+  border-top: 1px solid #E9ECF6;
+  padding: 20px 0;
+}
+.task .task-cont-right .item {
+  margin-bottom: 15px;
+}
+.task .task-cont-right .userMsg {
+  display: inline-block;
+}
+.task .task-cont-right .userMsg img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+.task .task-cont-right .userMsg span {
+  display: inline-block;
+  vertical-align: middle;
 }
