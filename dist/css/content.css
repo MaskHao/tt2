@@ -1415,8 +1415,6 @@ ul:after {
   border: 1px solid #ddd;
 }
 .task .edui-container {
-  height: 320px;
-  border: 1px solid #DDDDDD;
   border-radius: 5px;
 }
 .task .btnSave,

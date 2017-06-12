@@ -10,9 +10,23 @@
     <script src="lib/tinymce/tinymce.min.js"></script>
     <script>
         tinymce.init({
+
             selector: '#mytextarea',
-            //toolbar: 'undo redo | styleselect | bold italic | link image',
+            plugins: [
+                'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+                'searchreplace wordcount visualblocks visualchars code fullscreen',
+                'insertdatetime media nonbreaking save table contextmenu directionality',
+                'emoticons template paste textcolor colorpicker textpattern imagetools codesample toc help'
+            ],
+            toolbar: 'undo redo | insert | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent| link  ',
+//            toolbar: 'undo redo | insert | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image',
+            height :260,
+            statusbar: false,
+            menubar: false,
+            language: 'zh_CN'
         });
+
+
     </script>
 </head>
 <body>
@@ -499,9 +513,6 @@
         </div>
     </div>
 
-
-
-
     <!--白板-->
     <div class="whiteBoard" style="display: none;">
         <div class="wb-hd">
@@ -890,7 +901,16 @@
 </div>
 
 
-
+<script>
+    var button = document.getElementsByClassName("btnSave")[0];
+    button.onclick = function () {
+        var activeEditor = tinymce.activeEditor;
+        var editBody = activeEditor.getBody();
+        activeEditor.selection.select(editBody);
+        var text = activeEditor.selection.getContent( { 'format' : 'text' } );
+        alert(text+"//"+tinyMCE.activeEditor.getContent());
+    }
+</script>
 
 
 
